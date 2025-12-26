@@ -8,7 +8,13 @@
 
 Các quản trị viên thường bị động trước các cuộc xâm nhập trái phép do hệ thống log mặc định quá khó theo dõi, dễ bị xóa bỏ, hoặc các công cụ bảo mật hiện có quá nặng nề và phức tạp để triển khai trên các máy chủ cấu hình thấp, hoặc chỉ đơn giản là bạn không có đủ ngân sách, không đủ nhân lực để ứng dụng các hệ thống khổng lồ như EDR (**E**ndpoint **D**etection and **R**esponse), XDR (**E**xtended **D**etection and **R**esponse) vốn chỉ dành cho doanh nghiệp lớn, chuyên nghiệp.
 
-Bản thân mình cũng gặp khá nhiều rắc rối cũng như trở ngại khi phải quản lý một số lượng tương đối máy chủ linux với **nguồn lực hạn chế**, đây là lý do chính thúc đẩy mình bắt tay xây dựng PAMSignal.
+**Lý do tôi tạo ra PAMSignal**
+
+- Bản thân mình cũng gặp khá nhiều rắc rối cũng như trở ngại khi phải quản lý một số lượng tương đối máy chủ linux với **nguồn lực hạn chế**.
+- Mong muốn thực hành lập trình C nhiều hơn, thành thục và giỏi kỹ năng này.
+- Mong muốn kết nối, học hỏi từ những chuyên gia trong ngành (gồm cả trong và ngoài nước).
+- Muốn tìm hiểu sâu hơn về Linux.
+- Tạo ra sản phẩm mã nguồn mở Make in Vietnam.
 
 **PAMSignal là gì?**
 
