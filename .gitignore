@@ -1,3 +1,7 @@
 archive/
 .claude/
 .vscode/
+*.o
+*.log
+*.tmp
+pamsignal

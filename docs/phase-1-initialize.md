@@ -1,16 +1,33 @@
 # Bước 1 - Initialize (Khởi tạo dự án)
 
-- **Trạng thái**: Đang thực hiện
+- **Trạng thái**: Hoàn thành
 - **Ngày thực hiện**: 26/12/2025
-- **Ngày hoàn thành**: -
+- **Ngày hoàn thành**: 26/12/2025
 
 ## 1. Mục tiêu
 
 Thiết lập nền móng cho dự án **PAMSignal**. Đảm bảo mã nguồn được tổ chức khoa học, dễ mở rộng và có quy trình biên dịch tự động hóa, tối ưu hiệu suất.
 
-## 2. Yêu cầu cấu hình
+## 2. Yêu cầu
+
+**Hệ điều hành**
 
 Do dự án tập trung vào linux và cần include thư viện *libsystemd*  nên để có thể chạy project này, bạn cần dùng hệ điều hành Linux, chọn đại một distro như Ubuntu chẳng hạn.
+
+**Gói phụ thuộc**
+
+```bash
+sudo apt update
+sudo apt install libsystemd-dev pkg-config build-essential
+```
+
+Sau khi cài đặt xong thì bạn có thể clone dự án về máy và chạy thử lệnh `make` , output sẽ là file thực thi `pamsignal`
+
+```bash
+git clone git@github.com:anhtuank7c/pamsignal.git
+cd pamsignal
+make
+```
 
 ## 3. Cấu trúc thư mục
 

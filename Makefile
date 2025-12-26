@@ -1,6 +1,6 @@
 CC = gcc
-CFLAGS = -Wall -Wextra -Iinclude -O2
-LDFLAGS = -lsystemd
+CFLAGS = -Wall -Wextra -Iinclude -O2 $(shell pkg-config --cflags libsystemd)
+LDFLAGS = $(shell pkg-config --libs libsystemd)
 
 # Source files
 SRCS = $(wildcard src/*.c)
