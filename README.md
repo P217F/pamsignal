@@ -34,12 +34,12 @@ Vậy **PAMSignal** phù hợp với ai?
 
 PAMSignal tập trung vào giám sát truy cập (Access Monitoring) vậy nên bạn sẽ cần dùng tới PAMSignal nếu như:
 
-* Bạn cần quản trị 1-10 vps/server linux (hoặc hơn thế nữa).
-* Bạn có server cấu hình tối thiểu nhưng vẫn muốn giám sát.
-* Bạn cần một công cụ giám sát truy cập vừa đủ đơn giản, nhỏ nhẹ, không cần backend, hoàn toàn miễn phí.
-* Bạn ưu tiên sự tối giản, cài đặt là dùng (plug & play), không cần tốn thời gian đọc hàng trăm trang tài liệu.
-* Bạn cần công cụ có thể gửi cảnh báo tới Telegram/Slack/custom webhook (tích hợp thẳng vào web của bạn).
-* Bạn cần công cụ miễn phí phân phối sử dụng giấy phép mã nguồn mở MIT.
+- Bạn cần quản trị 1-10 vps/server linux (hoặc hơn thế nữa).
+- Bạn có server cấu hình tối thiểu nhưng vẫn muốn giám sát.
+- Bạn cần một công cụ giám sát truy cập vừa đủ đơn giản, nhỏ nhẹ, không cần backend, hoàn toàn miễn phí.
+- Bạn ưu tiên sự tối giản, cài đặt là dùng (plug & play), không cần tốn thời gian đọc hàng trăm trang tài liệu.
+- Bạn cần công cụ có thể gửi cảnh báo tới Telegram/Slack/custom webhook (tích hợp thẳng vào web của bạn).
+- Bạn cần công cụ miễn phí phân phối sử dụng giấy phép mã nguồn mở MIT.
 
 **Vì sao dùng C làm ngôn ngữ chính lập trình PAMSignal?**
 
@@ -51,22 +51,22 @@ Tôi chia dự án thành 3 giai đoạn chính để đảm bảo tính khả t
 
 ### Giai đoạn 1: The Core Observer (Nền tảng hệ thống)
 
-* [ ] Initialize: Cấu trúc dự án C, quản lý dependency bằng Makefile.
-* [ ] Journal Subscriber: Sử dụng *libsystemd* để lắng nghe luồng sự kiện auth.
-* [ ] PAM Logic: Lọc chính xác các sự kiện *session opened* và *session closed*.
-* [ ] Information Extractor: Trích xuất các trường dữ liệu: User, Remote IP, Service (sshd/sudo/su).
+- [ ] Initialize: Cấu trúc dự án C, quản lý dependency bằng Makefile.
+- [ ] Journal Subscriber: Sử dụng *libsystemd* để lắng nghe luồng sự kiện auth.
+- [ ] PAM Logic: Lọc chính xác các sự kiện *session opened* và *session closed*.
+- [ ] Information Extractor: Trích xuất các trường dữ liệu: User, Remote IP, Service (sshd/sudo/su).
 
 ### Giai đoạn 2: Context Awareness (Làm giàu thông tin)
 
-* [ ] **Network Discovery:**  Liệt kê toàn bộ IP hiện có của máy chủ.
-  * Truy vấn `/proc/net/tcp` để xác định **Destination IP** (IP mà khách đang kết nối tới).
-* [ ] **Provider Identity:** Tích hợp logic nhận diện nhà cung cấp Cloud (AWS, GCP, DigitalOcean, v.v.).
-* [ ] **ASN/Organization Lookup:** Lấy tên ISP của người đang truy cập (Ví dụ: Viettel, FPT, hay một trung tâm dữ liệu lạ ở Nga).
-* [ ] **Message Templating:** Thiết kế cấu trúc thông báo chuyên nghiệp, dễ đọc.
+- [ ] **Network Discovery:**  Liệt kê toàn bộ IP hiện có của máy chủ.
+  - Truy vấn `/proc/net/tcp` để xác định **Destination IP** (IP mà khách đang kết nối tới).
+- [ ] **Provider Identity:** Tích hợp logic nhận diện nhà cung cấp Cloud (AWS, GCP, DigitalOcean, v.v.).
+- [ ] **ASN/Organization Lookup:** Lấy tên ISP của người đang truy cập (Ví dụ: Viettel, FPT, hay một trung tâm dữ liệu lạ ở Nga).
+- [ ] **Message Templating:** Thiết kế cấu trúc thông báo chuyên nghiệp, dễ đọc.
 
 ### Giai đoạn 3: The Dispatcher & Distribution (Phát hành)
 
-* [ ] **Multi-channel Alert:** Tích hợp `libcurl` để gửi thông báo qua Telegram/Slack API.
-* [ ] **Config Manager:** Xây dựng file cấu hình (YAML hoặc JSON) để người dùng tùy biến.
-* [ ] **Snap Packaging:** Đóng gói ứng dụng dưới dạng Snap để hỗ trợ cài đặt trên mọi Distro Linux (Ubuntu, CentOS, Fedora...).
-* [ ] **Official Release:** Đưa lên Snap Store toàn cầu.
+- [ ] **Multi-channel Alert:** Tích hợp `libcurl` để gửi thông báo qua Telegram/Slack API.
+- [ ] **Config Manager:** Xây dựng file cấu hình (YAML hoặc JSON) để người dùng tùy biến.
+- [ ] **Snap Packaging:** Đóng gói ứng dụng dưới dạng Snap để hỗ trợ cài đặt trên mọi Distro Linux (Ubuntu, CentOS, Fedora...).
+- [ ] **Official Release:** Đưa lên Snap Store toàn cầu.
