@@ -1,4 +1,4 @@
-![License](https://img.shields.io/github/license/anhtuank7c/pamsignal?color=blue)
+![License](https://img.shields.io/github/license/anhtuank7c/pamsignal)
 ![Language](https://img.shields.io/badge/Language-C-orange)
 ![Platform](https://img.shields.io/badge/Platform-Linux-lightgrey)
 
