@@ -18,7 +18,7 @@ Do dự án tập trung vào linux và cần include thư viện *libsystemd*  n
 
 ```bash
 sudo apt update
-sudo apt install libsystemd-dev pkg-config build-essential
+sudo apt install libsystemd-dev pkg-config build-essential cmake
 ```
 
 Sau khi cài đặt xong thì bạn có thể clone dự án về máy và chạy thử lệnh `make` , output sẽ là file thực thi `pamsignal`
